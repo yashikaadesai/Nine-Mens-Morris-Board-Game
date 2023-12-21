@@ -1,5 +1,5 @@
 import NMM
-from proj07 import points_not_in_mills
+from Ninemill import points_not_in_mills
 
 instructor_board = """
     Instructor's Board

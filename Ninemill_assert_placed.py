@@ -1,5 +1,5 @@
 import NMM
-from proj07 import count_mills
+from Ninemill import placed
 
 instructor_board = """
     Instructor's Board
@@ -12,6 +12,8 @@ instructor_board = """
     1 [X]------[X]------[X]
        a  b  c  d  e  f  g
    """
+instructor_X = ['a1', 'b2', 'd1', 'd2', 'd3', 'g1', 'g4', 'g7']
+instructor_O = ['a4', 'b4', 'c4', 'd6', 'f4', 'f6']
 board = NMM.Board()
 board.assign_piece("X","b2")
 board.assign_piece("X","a1")
@@ -27,11 +29,11 @@ board.assign_piece("O","f4")
 board.assign_piece("O","a4")
 board.assign_piece("O","b4")
 board.assign_piece("O","c4")
-X_mill_count = count_mills(board,'X')
-O_mill_count = count_mills(board,'O')
+student_X = sorted(list(placed(board,"X")))
+student_O = sorted(list(placed(board,"O")))
 print(instructor_board)
-print("Instructor's 'X' mill count: 3")
-print("Instructor's 'O' mill count: 1")
-print("Student's 'X' mill count:", X_mill_count)
-print("Student's 'O' mill count:", O_mill_count)
-assert X_mill_count == 3 and O_mill_count == 1
+print("Instructor's 'X' placed:", instructor_X) 
+print("Student's 'X' placed:   ", student_X)
+print("Instructor's 'O' placed:", instructor_O)
+print("Student's 'O' placed:   ", student_O)
+assert instructor_X == student_X and instructor_O == student_O

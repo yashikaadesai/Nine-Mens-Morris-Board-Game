@@ -1,5 +1,5 @@
 import NMM
-from proj07 import is_winner
+from Ninemill import is_winner
 
 instructor_board_1 = """
     Instructor's Board Not-Win
