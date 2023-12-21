@@ -1,4 +1,5 @@
-                                                                                       
+
+
     The game is played on a grid where each intersection is a "point" and
     three points in a row is called a "mill". Each player has 9 pieces and
     in Phase 1 the players take turns placing their pieces on the board to 
